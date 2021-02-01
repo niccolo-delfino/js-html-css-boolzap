@@ -38,16 +38,18 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #FAFAFA;
+  background-color: #EAEAEA;
 }
 
 .header-sx-user,
-.chat-avatar{
+.chat-avatar,
+.header-dx-user{
   height: 100%;
   display: flex;
   align-items: center;
 }
-.header-sx-user-avatar{
+.header-sx-user-avatar,
+.header-dx-user-avatar{
   height: 100%;
   display: flex;
   align-items: center;
@@ -55,15 +57,17 @@ body{
 }
 
 .header-sx-user img,
-.chat-avatar img{
+.chat-avatar img,
+.header-dx-user img{
   height: 80%;
   border-radius: 50%;
 }
 
-.header-sx-icons i{
+.header-sx-icons i,
+.header-dx-icons i{
   padding-left: 10px;
   font-size: 20px;
-  color: grey;
+  color: #B4B6B9;
 }
 
 /* ALERT */
@@ -99,7 +103,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #FAFAFA;
+  background-color: #EAEAEA;
 }
 
 .search-container{
@@ -116,7 +120,7 @@ body{
 }
 .search-left i{
   margin-left: 10px;
-  color: grey;
+  color: #B4B6B9;
 }
 
 /* CONTACTS */
@@ -129,7 +133,7 @@ body{
 .chats{
   justify-content: flex-start;
   background-color: white;
-  border-top: 1px solid #FAFAFA;
+  border-top: 1px solid #EAEAEA;
 }
 
 .chats h4{
@@ -148,7 +152,12 @@ body{
 .header-dx{
   width: 100%;
   height: 70px;
-  background-color: rgb(24, 204, 222);
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #EAEAEA;
+  border-left: 1px solid #B4B6B9;
 }
 
 .message-container{
@@ -156,6 +165,7 @@ body{
   height: calc(100% - 70px - 70px);
   display: flex;
   align-items: center;
+  background-image: url('../img/mine.jpg');
 }
 
 .messages{
