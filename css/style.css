@@ -160,6 +160,12 @@ body{
   border-left: 1px solid #B4B6B9;
 }
 
+.header-dx p{
+ font-size: 13px;
+ color: #B4B6B9;
+}
+
+/* MESSAGE */
 .message-container{
   width: 100%;
   height: calc(100% - 70px - 70px);
@@ -175,8 +181,29 @@ body{
   background-color: rgb(252, 198, 252);
 }
 
+/* FOOTER */
 .footer-dx{
   width: 100%;
   height: 70px;
-  background-color: rgb(151, 149, 242);
+  background-color: #F3EEEA;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-dx .scrittura{
+  width: 85%;
+  height: 40px;
+}
+
+.footer-dx input{
+  width: 100%;
+  height: 100%;
+  padding-left: 15px;
+  border: none;
+}
+
+.footer-dx i{
+font-size: 25px;
+color: #6B7376;
 }
