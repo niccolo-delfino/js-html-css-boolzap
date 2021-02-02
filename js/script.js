@@ -74,7 +74,7 @@ var app = new Vue({
         visible: true,
         messages: [
           {
-            date: '10/01/2020 15:30:55',
+            date: '10/01/2020 15:40:55',
             text: 'ricevuto',
             status: 'received'
           },
