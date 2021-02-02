@@ -49,8 +49,14 @@
       </div>
       <!-- CONTACTS -->
       <div class="contacts">
+        <div class="chats" v-for="utente in contacs">
+          <div class="chat-avatar" >
+            <img :src="'img/'+utente.name+'.jpg'" :alt="utente.name">
+          </div>
+          <h4>{{utente.name}}</h4>
+        </div>
 
-        <div class="chats">
+        <!-- <div class="chats">
           <div class="chat-avatar">
             <img src="img/Cristiano.jpg" alt="Cristiano">
           </div>
@@ -79,7 +85,7 @@
             <img src="img/Yuri.jpg" alt="Yuri">
           </div>
           <h4>Yuri</h4>
-        </div>
+        </div> -->
 
 
       </div>
