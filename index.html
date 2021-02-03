@@ -115,8 +115,10 @@
       <div class="message-container">
         <div class="messages" v-for="contatto in contacs" v-if="contatto.visible == true">
           <!-- RICEVUTI E INVIATI -->
-          <div class="" v-for="message in contatto.messages">
-             {{message.text}}
+          <div :class="message.status" v-for="message in contatto.messages">
+            <div class="messages-contenuto" :class="message.status+'-contenuto'">
+              {{message.text}}
+            </div>
           </div>
 
           <!-- <div v-if>

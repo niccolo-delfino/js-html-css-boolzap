@@ -193,28 +193,27 @@ body{
   margin: 0 auto;
 }
 
-.messages .ricevuti{
+.messages .received{
   display: flex;
 }
 
-.messages .inviati{
+.messages .sent{
   display: flex;
   justify-content: flex-end;
 }
 
-.messages .ricevuti-contenuto,
-.messages .inviati-contenuto{
+.messages .messages-contenuto{
   max-width: 60%;
   margin-bottom: 10px;
   padding: 5px 25px 5px 5px;
   border-radius: 7px;
 }
 
-.messages .ricevuti-contenuto{
+.messages .sent-contenuto{
  background-color: white;
 }
 
-.messages .inviati-contenuto{
+.messages .received-contenuto{
 
  background-color: #dcf8c7;
 }
