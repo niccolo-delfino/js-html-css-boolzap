@@ -49,12 +49,13 @@
       </div>
       <!-- CONTACTS -->
       <div class="contacts">
-        <div class="chats" v-for="(utente, index) in contacs" @click="cambio(index)">
+        <div class="chats" v-for="(element, index) in contacs" @click="cambio(index)">
           <div class="chat-avatar" >
-            <img :src="'img/'+utente.name+'.jpg'" :alt="utente.name">
+            <img :src="'img/'+element.name+'.jpg'" :alt="element.name">
           </div>
-          <h4>{{utente.name}}</h4>
-          <p>prova</p>
+          <h4>{{element.name}}</h4>
+          <p>{{element.messages[element.messages.length-1].time}}</p>
+          <h6>{{element.messages[element.messages.length-1].text}}</h6>
         </div>
 
 

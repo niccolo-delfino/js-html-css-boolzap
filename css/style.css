@@ -209,11 +209,11 @@ body{
   border-radius: 7px;
 }
 
-.messages .sent-contenuto{
+.messages .received-contenuto{
  background-color: white;
 }
 
-.messages .received-contenuto{
+.messages .sent-contenuto{
 
  background-color: #dcf8c7;
 }
