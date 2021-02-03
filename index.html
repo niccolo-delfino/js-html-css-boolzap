@@ -57,6 +57,7 @@
           <p>prova</p>
         </div>
 
+
         <!-- <div class="chats">
           <div class="chat-avatar">
             <img src="img/Cristiano.jpg" alt="Cristiano">
@@ -118,6 +119,9 @@
           <div :class="element.status" v-for="element in contacs[contatore].messages">
             <div class="messages-contenuto" :class="element.status+'-contenuto'">
               {{element.text}}
+              <div class="orario">
+                {{element.time}}
+              </div>
             </div>
           </div>
 

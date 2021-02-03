@@ -9,42 +9,42 @@ var app = new Vue({
         visible: true,
         messages: [
           {
-            date: '10/01/2020 15:30:55',
+            time: '15:30',
             text: 'Ciao bello de casa! 🔥🔥',
             status: 'received'
           },
           {
-            date: '10/01/2020 15:50:00',
+            time: '15:32',
             text: 'Ah bello!🌟🌟',
             status: 'sent'
           },
           {
-            date: '10/01/2020 15:50:30',
+            time: '15:32',
             text: 'Tutto bene?',
             status: 'sent'
           },
           {
-            date: '10/01/2020 15:50:30',
+            time: '15:50',
             text: 'Sì sì, alla grandeeeee',
             status: 'received'
           },
           {
-            date: '10/01/2020 15:50:30',
+            time: '15:50',
             text: 'DAJEEEEEE',
             status: 'received'
           },
           {
-            date: '10/01/2020 15:50:30',
+            time: '15:50',
             text: 'Ma senti n\'attimo, che te ricordi mica come se scrive quer cavolo de Map?',
             status: 'received'
           },
           {
-            date: '10/01/2020 15:50:30',
+            time: '15:50',
             text: 'Guarda, per la sintassi puoi guardare su W3School 😉😉',
             status: 'sent'
           },
           {
-            date: '10/01/2020 15:50:30',
+            time: '15:50',
             text: '...... 😡😡😡',
             status: 'received'
           },
@@ -57,14 +57,24 @@ var app = new Vue({
         visible: false,
         messages: [
           {
-            date: '10/01/2020 15:30:55',
-            text: 'ricevuto',
+            time: '15:30',
+            text: 'Oh Papaya, hai visto che bella la nuova Volvo?',
             status: 'received'
           },
           {
-            date: '10/01/2020 15:50:00',
-            text: 'inviato',
+            time: '15:32',
+            text: 'We Cri! aspè, vado a vedere',
             status: 'sent'
+          },
+          {
+            time: '15:37',
+            text: 'Ma... Ma che è sta cafonata? \nSembra un bidone dell\'umido!',
+            status: 'sent'
+          },
+          {
+            time: '15:40',
+            text: '....ma io ti rimuovo dai contatti',
+            status: 'received'
           },
         ],
       //fine array messaggi
@@ -75,14 +85,34 @@ var app = new Vue({
         visible: false,
         messages: [
           {
-            date: '10/01/2020 15:40:55',
-            text: 'ricevuto',
+            time: '15:40',
+            text: 'BELLA PAPAYAAAAAAAA',
             status: 'received'
           },
           {
-            date: '10/01/2020 15:50:00',
-            text: 'inviato',
+            time: '15:50',
+            text: 'Ciao Dave 😂😂😂',
             status: 'sent'
+          },
+          {
+            time: '15:51',
+            text: 'Come va? \n Oh ma ti ricordi che finito il corso mi devi offrire un\'aperitivo?🎉',
+            status: 'received'
+          },
+          {
+            time: '16:05',
+            text: 'Papaya?',
+            status: 'received'
+          },
+          {
+            time: '17:40',
+            text: 'Oh Papayaaaaaaaaaaaaaaaaaaaaa',
+            status: 'received'
+          },
+          {
+            time: '21:07',
+            text: '....',
+            status: 'received'
           },
         ],
         //fine array messaggi
@@ -93,14 +123,24 @@ var app = new Vue({
         visible: false,
         messages: [
           {
-            date: '10/01/2020 15:30:55',
-            text: 'ricevuto',
+            time: '15:30',
+            text: 'Bella! \n Partitina ad Age?',
             status: 'received'
           },
           {
-            date: '10/01/2020 15:50:00',
-            text: 'inviato',
+            time: '15:32',
+            text: 'Dammi un attimo che pusho e vengo 👌',
             status: 'sent'
+          },
+          {
+            time: '15:35',
+            text: 'Esercizio finito? \neeeeeeeeezzz',
+            status: 'received'
+          },
+          {
+            time: '15:36',
+            text: 'Vinciamo su Age? \neeeeeeeeezzz',
+            status: 'received'
           },
         ],
         //fine array messaggi
@@ -111,14 +151,29 @@ var app = new Vue({
         visible: false,
         messages: [
           {
-            date: '10/01/2020 15:30:55',
-            text: 'ricevuto',
+            time: '15:30',
+            text: 'Oh ma tu sei riuscito a finire sto cavolo di snack?!',
             status: 'received'
           },
           {
-            date: '10/01/2020 15:50:00',
-            text: 'inviato3',
+            time: '15:31',
+            text: 'Sì sì e tu?',
             status: 'sent'
+          },
+          {
+            time: '15:33',
+            text: 'IO NO! \n come diavolo hai fatto?',
+            status: 'received'
+          },
+          {
+            time: '15:36',
+            text: 'Ah boh, non ne ho la più pallida idea😂😂😂😂',
+            status: 'sent'
+          },
+          {
+            time: '15:38',
+            text: 'Va bene, grazie, allora adesso spacco tutto...😡',
+            status: 'received'
           },
         ],
         //fine array messaggi

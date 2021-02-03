@@ -218,6 +218,16 @@ body{
  background-color: #dcf8c7;
 }
 
+.messages .orario{
+  padding-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 11px;
+  position: relative;
+  left: 15px;
+  color: grey;
+}
+
 /* FOOTER */
 .footer-dx{
   width: 100%;
