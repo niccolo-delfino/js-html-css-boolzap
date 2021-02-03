@@ -113,10 +113,19 @@
 
       <!-- MESSAGES -->
       <div class="message-container">
-        <div class="messages">
+        <div class="messages" v-for="contatto in contacs" v-if="contatto.visible == true">
           <!-- RICEVUTI E INVIATI -->
+          <div class="" v-for="message in contatto.messages">
+             {{message.text}}
+          </div>
 
-          <div class="ricevuti">
+          <!-- <div v-if>
+            <div class="ricevuti-contenuto">
+              <p></p>
+            </div>
+          </div> -->
+
+          <!-- <div class="ricevuti">
             <div class="ricevuti-contenuto">
               <p>Ciao bello de casa! 🔥🔥</p>
             </div>
@@ -148,7 +157,7 @@
             <div class="ricevuti-contenuto">
               <p>...... 😡😡😡</p>
             </div>
-          </div>
+          </div> -->
 
         </div>
       </div>

@@ -53,7 +53,7 @@ var app = new Vue({
       //fine oggetto
       {
         name: 'Cristiano',
-        visible: true,
+        visible: false,
         messages: [
           {
             date: '10/01/2020 15:30:55',
@@ -71,7 +71,7 @@ var app = new Vue({
       //fine oggetto
       {
         name: 'Davide',
-        visible: true,
+        visible: false,
         messages: [
           {
             date: '10/01/2020 15:40:55',
@@ -89,7 +89,7 @@ var app = new Vue({
       //fine oggetto
       {
         name: 'Giacomo',
-        visible: true,
+        visible: false,
         messages: [
           {
             date: '10/01/2020 15:30:55',
@@ -107,7 +107,7 @@ var app = new Vue({
       //fine oggetto
       {
         name: 'Yuri',
-        visible: true,
+        visible: false,
         messages: [
           {
             date: '10/01/2020 15:30:55',
@@ -135,5 +135,5 @@ var app = new Vue({
 
   methods: {
 
-  }
+  },
 });
