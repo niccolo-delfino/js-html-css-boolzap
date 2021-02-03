@@ -53,9 +53,11 @@
           <div class="chat-avatar" >
             <img :src="'img/'+element.name+'.jpg'" :alt="element.name">
           </div>
+          <div class="details">
           <h4>{{element.name}}</h4>
+          <p>{{element.messages[element.messages.length-1].text}}</p>
+          </div>
           <p>{{element.messages[element.messages.length-1].time}}</p>
-          <h6>{{element.messages[element.messages.length-1].text}}</h6>
         </div>
 
 
