@@ -2,6 +2,7 @@ var app = new Vue({
   el: `#app`,
   data: {
     user: 'Papaya',
+    contatore: 0,
     contacs: [
       {
         name: 'Emanuele',
@@ -116,7 +117,7 @@ var app = new Vue({
           },
           {
             date: '10/01/2020 15:50:00',
-            text: 'inviato',
+            text: 'inviato3',
             status: 'sent'
           },
         ],
@@ -134,6 +135,8 @@ var app = new Vue({
   },
 
   methods: {
-
+    cambio(index){
+      this.contatore = index;
+    },
   },
 });

@@ -49,7 +49,7 @@
       </div>
       <!-- CONTACTS -->
       <div class="contacts">
-        <div class="chats" v-for="utente in contacs">
+        <div class="chats" v-for="(utente, index) in contacs" @click="cambio(index)">
           <div class="chat-avatar" >
             <img :src="'img/'+utente.name+'.jpg'" :alt="utente.name">
           </div>
@@ -97,10 +97,10 @@
       <div class="header-dx">
         <div class="header-dx-user">
           <div class="header-dx-user-avatar">
-            <img src="img/Emanuele.jpg" alt="Emanuele">
+            <img :src="'img/'+contacs[contatore].name+'.jpg'" :alt="contacs[contatore].name">
           </div>
           <div class="dettagli">
-            <h4>Emanuele</h4>
+            <h4>{{contacs[contatore].name}}</h4>
             <p>Ultimo accesso alle...</p>
           </div>
         </div>
@@ -113,11 +113,11 @@
 
       <!-- MESSAGES -->
       <div class="message-container">
-        <div class="messages" v-for="contatto in contacs" v-if="contatto.visible == true">
+        <div class="messages" >
           <!-- RICEVUTI E INVIATI -->
-          <div :class="message.status" v-for="message in contatto.messages">
-            <div class="messages-contenuto" :class="message.status+'-contenuto'">
-              {{message.text}}
+          <div :class="element.status" v-for="element in contacs[contatore].messages">
+            <div class="messages-contenuto" :class="element.status+'-contenuto'">
+              {{element.text}}
             </div>
           </div>
 
