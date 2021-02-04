@@ -197,12 +197,14 @@ var app = new Vue({
     addText(){
       setTimeout(() => {
         this.contacs[this.contatore].messages.push({
+          time: moment().lang("it").format('LT'),
           text: '*L\'utente ha abbandonato la chat*',
           status: 'received'
         });
       }, 2000);
       if (this.nuovoText.length > 0) {
         this.contacs[this.contatore].messages.push({
+          time: moment().lang("it").format('LT'),
           text: this.nuovoText,
           status: 'sent'
         });
