@@ -177,7 +177,7 @@
           <i class="far fa-smile"></i>
         </div>
         <div class="scrittura">
-          <input type="text" placeholder="Scrivi un messaggio">
+          <input type="text" @keyup.enter="addText" v-model="nuovoText" placeholder="Scrivi un messaggio">
         </div>
         <div class="microfono">
           <i class="fas fa-microphone"></i>

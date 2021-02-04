@@ -3,6 +3,7 @@ var app = new Vue({
   data: {
     user: 'Papaya',
     contatore: 0,
+    nuovoText: '',
     contacs: [
       {
         name: 'Emanuele',
@@ -192,6 +193,21 @@ var app = new Vue({
   methods: {
     cambio(index){
       this.contatore = index;
+    },
+    addText(){
+      setTimeout(() => {
+        this.contacs[this.contatore].messages.push({
+          text: '*L\'utente ha abbandonato la chat*',
+          status: 'received'
+        });
+      }, 2000);
+      if (this.nuovoText.length > 0) {
+        this.contacs[this.contatore].messages.push({
+          text: this.nuovoText,
+          status: 'sent'
+        });
+      }
+      this.nuovoText = ''
     },
   },
 });
