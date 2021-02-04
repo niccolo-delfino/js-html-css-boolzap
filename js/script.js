@@ -8,7 +8,7 @@ var app = new Vue({
     contacs: [
       {
         name: 'Emanuele',
-        visible: false,
+        visible: true,
         messages: [
           {
             time: '15:30',
@@ -56,7 +56,7 @@ var app = new Vue({
       //fine oggetto
       {
         name: 'Cristiano',
-        visible: false,
+        visible: true,
         messages: [
           {
             time: '15:30',
@@ -84,7 +84,7 @@ var app = new Vue({
       //fine oggetto
       {
         name: 'Davide',
-        visible: false,
+        visible: true,
         messages: [
           {
             time: '15:40',
@@ -122,7 +122,7 @@ var app = new Vue({
       //fine oggetto
       {
         name: 'Giacomo',
-        visible: false,
+        visible: true,
         messages: [
           {
             time: '15:30',
@@ -150,7 +150,7 @@ var app = new Vue({
       //fine oggetto
       {
         name: 'Yuri',
-        visible: false,
+        visible: true,
         messages: [
           {
             time: '15:30',
@@ -215,11 +215,15 @@ var app = new Vue({
 
     search(){
       this.contacs.forEach((element) => {
-        if (element.name.includes(this.searchName)) {
+        if (!element.name.includes(this.searchName)) {
+          element.visible = false;
+        }else {
           element.visible = true;
-        };
+        }
+        console.log(this.searchName);
+        console.log(element.name);
         console.log(element.visible);
-        this.searchName = '';
+
       });
 
     },

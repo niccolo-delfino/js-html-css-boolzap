@@ -45,12 +45,12 @@
       <div class="search-left">
         <div class="search-container">
           <i class="fas fa-search"></i>
-          <input type="text" @keyup.enter="search" v-model="searchName" placeholder="Cerca o inizia una nuova chat">
+          <input type="text" @keyup="search" v-model="searchName" placeholder="Cerca o inizia una nuova chat">
         </div>
       </div>
       <!-- CONTACTS -->
       <div class="contacts">
-        <div class="chats" v-for="(element, index) in contacs" @click="cambio(index)">
+        <div class="chats" v-for="(element, index) in contacs" @click="cambio(index)" v-if="element.visible==true">
           <div class="chat-avatar" >
             <img :src="'img/'+element.name+'.jpg'" :alt="element.name">
           </div>
