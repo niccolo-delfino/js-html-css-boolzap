@@ -4,10 +4,11 @@ var app = new Vue({
     user: 'Papaya',
     contatore: 0,
     nuovoText: '',
+    searchName: '',
     contacs: [
       {
         name: 'Emanuele',
-        visible: true,
+        visible: false,
         messages: [
           {
             time: '15:30',
@@ -211,5 +212,17 @@ var app = new Vue({
       }
       this.nuovoText = ''
     },
+
+    search(){
+      this.contacs.forEach((element) => {
+        if (element.name.includes(this.searchName)) {
+          element.visible = true;
+        };
+        console.log(element.visible);
+        this.searchName = '';
+      });
+
+    },
+
   },
 });

@@ -45,7 +45,7 @@
       <div class="search-left">
         <div class="search-container">
           <i class="fas fa-search"></i>
-          <input type="text" placeholder="Cerca o inizia una nuova chat">
+          <input type="text" @keyup.enter="search" v-model="searchName" placeholder="Cerca o inizia una nuova chat">
         </div>
       </div>
       <!-- CONTACTS -->
