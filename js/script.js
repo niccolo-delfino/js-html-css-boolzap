@@ -215,7 +215,7 @@ var app = new Vue({
 
     search(){
       this.contacs.forEach((element) => {
-        if (!element.name.includes(this.searchName)) {
+        if (!element.name.toLowerCase().includes(this.searchName.toLowerCase())) {
           element.visible = false;
         }else {
           element.visible = true;
