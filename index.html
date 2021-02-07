@@ -54,7 +54,7 @@
           <div class="chat-avatar" >
             <img :src="'img/'+element.name+'.jpg'" :alt="element.name">
           </div>
-          <div class="details">
+          <div class="details" :class="element.messages[element.messages.length-1].status+'-details'">
           <h4>{{element.name}}</h4>
           <p>{{element.messages[element.messages.length-1].text}}</p>
           </div>
@@ -123,6 +123,7 @@
           <div :class="element.status" v-for="element in contacs[contatore].messages">
             <div class="messages-contenuto" :class="element.status+'-contenuto'">
               {{element.text}}
+              <i class="fas fa-angle-down"></i>
               <div class="orario">
                 {{element.time}}
               </div>

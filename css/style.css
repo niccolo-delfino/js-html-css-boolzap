@@ -148,7 +148,7 @@ body{
   align-self: flex-start;
 }
 
-.chats .details p::before{
+.chats .sent-details p::before{
   font-family: "Font Awesome 5 Free";
    content: "\f560";
    display: inline-block;
@@ -225,9 +225,25 @@ body{
 .messages .messages-contenuto{
   max-width: 60%;
   margin-bottom: 10px;
-  padding: 10px 25px 5px 10px;
+  padding: 10px 35px 5px 10px;
   border-radius: 7px;
   font-size: 15px;
+  position: relative;
+}
+
+.messages .messages-contenuto i{
+   display: none;
+   vertical-align: middle;
+   font-size: 20px;
+   font-weight: 900;
+   color: grey;
+   position: absolute;
+   top: 10px;
+   right: 10px;
+}
+
+.messages .messages-contenuto:hover i{
+   display: inline-block;
 }
 
 .messages .received-contenuto{
@@ -245,7 +261,7 @@ body{
   justify-content: flex-end;
   font-size: 12px;
   position: relative;
-  left: 15px;
+  left: 30px;
   color: grey;
 }
 
