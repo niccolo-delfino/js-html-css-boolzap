@@ -251,7 +251,7 @@ body{
 }
 
 .messages .messages-contenuto .dropdown{
-   padding-top: 20px;
+  margin-top: 20px;
    vertical-align: middle;
    font-family: 'Roboto', sans-serif;
    font-size: 15px;
@@ -268,7 +268,11 @@ body{
 }
 
 .messages .messages-contenuto .dropdown ul li{
-  padding: 0 20px 10px 20px;
+  padding: 10px 20px 10px 20px;
+}
+
+.messages .messages-contenuto .dropdown ul li:hover{
+  background-color: #B4B6B9;
 }
 
 .messages .messages-contenuto:hover i{

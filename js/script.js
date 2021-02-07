@@ -19,37 +19,44 @@ var app = new Vue({
           {
             time: '15:32',
             text: 'Ah bello!🌟🌟',
-            status: 'sent'
+            status: 'sent',
+            dropdown: 'none'
           },
           {
             time: '15:32',
             text: 'Tutto bene?',
-            status: 'sent'
+            status: 'sent',
+            dropdown: 'none'
           },
           {
             time: '15:50',
             text: 'Sì sì, alla grandeeeee',
-            status: 'received'
+            status: 'received',
+            dropdown: 'none'
           },
           {
             time: '15:50',
             text: 'DAJEEEEEE',
-            status: 'received'
+            status: 'received',
+            dropdown: 'none'
           },
           {
             time: '15:50',
             text: 'Ma senti n\'attimo, che te ricordi mica come se scrive quer cavolo de Map?',
-            status: 'received'
+            status: 'received',
+            dropdown: 'none'
           },
           {
             time: '15:50',
             text: 'Guarda, per la sintassi puoi guardare su W3School 😉😉',
-            status: 'sent'
+            status: 'sent',
+            dropdown: 'none'
           },
           {
             time: '15:50',
             text: '...... 😡😡😡',
-            status: 'received'
+            status: 'received',
+            dropdown: 'none'
           },
         ],
         //fine array messaggi
@@ -62,22 +69,26 @@ var app = new Vue({
           {
             time: '15:30',
             text: 'Oh Papaya, hai visto che bella la nuova Volvo?',
-            status: 'received'
+            status: 'received',
+            dropdown: 'none'
           },
           {
             time: '15:32',
             text: 'We Cri! aspè, vado a vedere',
-            status: 'sent'
+            status: 'sent',
+            dropdown: 'none'
           },
           {
             time: '15:37',
             text: 'Ma... Ma che è sta cafonata? \nSembra un bidone dell\'umido!',
-            status: 'sent'
+            status: 'sent',
+            dropdown: 'none'
           },
           {
             time: '15:40',
             text: '....ma io ti rimuovo dai contatti',
-            status: 'received'
+            status: 'received',
+            dropdown: 'none'
           },
         ],
       //fine array messaggi
@@ -90,32 +101,38 @@ var app = new Vue({
           {
             time: '15:40',
             text: 'BELLA PAPAYAAAAAAAA',
-            status: 'received'
+            status: 'received',
+            dropdown: 'none'
           },
           {
             time: '15:50',
             text: 'Ciao Dave 😂😂😂',
-            status: 'sent'
+            status: 'sent',
+            dropdown: 'none'
           },
           {
             time: '15:51',
             text: 'Come va? \n Oh ma ti ricordi che finito il corso mi devi offrire un\'aperitivo?🎉',
-            status: 'received'
+            status: 'received',
+            dropdown: 'none'
           },
           {
             time: '16:05',
             text: 'Papaya?',
-            status: 'received'
+            status: 'received',
+            dropdown: 'none'
           },
           {
             time: '17:40',
             text: 'Oh Papayaaaaaaaaaaaaaaaaaaaaa',
-            status: 'received'
+            status: 'received',
+            dropdown: 'none'
           },
           {
             time: '21:07',
             text: '....',
-            status: 'received'
+            status: 'received',
+            dropdown: 'none'
           },
         ],
         //fine array messaggi
@@ -128,22 +145,26 @@ var app = new Vue({
           {
             time: '15:30',
             text: 'Bella! \n Partitina ad Age?',
-            status: 'received'
+            status: 'received',
+            dropdown: 'none'
           },
           {
             time: '15:32',
             text: 'Dammi un attimo che pusho e vengo 👌',
-            status: 'sent'
+            status: 'sent',
+            dropdown: 'none'
           },
           {
             time: '15:35',
             text: 'Esercizio finito? \neeeeeeeeezzz',
-            status: 'received'
+            status: 'received',
+            dropdown: 'none'
           },
           {
             time: '15:36',
             text: 'Vinciamo su Age? \neeeeeeeeezzz',
-            status: 'received'
+            status: 'received',
+            dropdown: 'none'
           },
         ],
         //fine array messaggi
@@ -156,27 +177,32 @@ var app = new Vue({
           {
             time: '15:30',
             text: 'Oh ma tu sei riuscito a finire sto cavolo di snack?!',
-            status: 'received'
+            status: 'received',
+            dropdown: 'none'
           },
           {
             time: '15:31',
             text: 'Sì sì e tu?',
-            status: 'sent'
+            status: 'sent',
+            dropdown: 'none'
           },
           {
             time: '15:33',
             text: 'IO NO! \n come diavolo hai fatto?',
-            status: 'received'
+            status: 'received',
+            dropdown: 'none'
           },
           {
             time: '15:36',
             text: 'Ah boh, non ne ho la più pallida idea😂😂😂😂',
-            status: 'sent'
+            status: 'sent',
+            dropdown: 'none'
           },
           {
             time: '15:38',
             text: 'Va bene, grazie, allora adesso spacco tutto...😡',
-            status: 'received'
+            status: 'received',
+            dropdown: 'none'
           },
         ],
         //fine array messaggi
@@ -201,19 +227,20 @@ var app = new Vue({
         this.contacs[this.contatore].messages.push({
           time: moment().locale('it').format('LT'),
           text: '*L\'utente ha abbandonato la chat*',
-          status: 'received'
+          status: 'received',
+          dropdown: 'none'
         });
       }, 2000);
       if (this.nuovoText.length > 0) {
         this.contacs[this.contatore].messages.push({
           time: moment().locale('it').format('LT'),
           text: this.nuovoText,
-          status: 'sent'
+          status: 'sent',
+          dropdown: 'none'
         });
       }
       this.nuovoText = ''
     },
-
     search(){
       this.contacs.forEach((element) => {
         if (!element.name.toLowerCase().includes(this.searchName.toLowerCase())) {
@@ -226,6 +253,16 @@ var app = new Vue({
         console.log(element.visible);
 
       });
+
+    },
+    toggle(index){
+
+      if ( this.contacs[this.contatore].messages[index].dropdown == 'none') {
+        this.contacs[this.contatore].messages[index].dropdown = 'active';
+      }else {
+        this.contacs[this.contatore].messages[index].dropdown = 'none';
+      }
+      console.log(this.contacs[this.contatore].messages[index].dropdown);
 
     },
 

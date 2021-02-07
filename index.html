@@ -120,10 +120,10 @@
       <div class="message-container">
         <div class="messages" >
           <!-- RICEVUTI E INVIATI -->
-          <div :class="element.status" v-for="element in contacs[contatore].messages">
+          <div :class="element.status" v-for="(element, index) in contacs[contatore].messages">
             <div class="messages-contenuto" :class="element.status+'-contenuto'">
               {{element.text}}
-              <i class="fas fa-angle-down">
+              <i class="fas fa-angle-down" @click="toggle(index)">
                 <div class="dropdown" :class="'dropdown-'+element.dropdown">
                   <ul>
                     <li><span>Rispondi</span></li>
