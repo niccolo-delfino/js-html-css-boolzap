@@ -255,6 +255,12 @@ var app = new Vue({
       });
 
     },
+
+    cancellaMessaggio(index){
+      this.contacs[this.contatore].messages.splice(index, 1);
+      console.log(this.contacs[this.contatore].messages);
+    },
+
     toggle(index){
 
       if ( this.contacs[this.contatore].messages[index].dropdown == 'none') {
@@ -262,9 +268,8 @@ var app = new Vue({
       }else {
         this.contacs[this.contatore].messages[index].dropdown = 'none';
       }
-      console.log(this.contacs[this.contatore].messages[index].dropdown);
+
 
     },
-
   },
 });
