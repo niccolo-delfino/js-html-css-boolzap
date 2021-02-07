@@ -5,10 +5,12 @@ var app = new Vue({
     contatore: 0,
     nuovoText: '',
     searchName: '',
+    staScrivendo: false,
     contacs: [
       {
         name: 'Emanuele',
         visible: true,
+        staScrivendo: false,
         messages: [
           {
             time: '15:30',
@@ -65,6 +67,7 @@ var app = new Vue({
       {
         name: 'Cristiano',
         visible: true,
+        staScrivendo: false,
         messages: [
           {
             time: '15:30',
@@ -97,6 +100,7 @@ var app = new Vue({
       {
         name: 'Davide',
         visible: true,
+        staScrivendo: false,
         messages: [
           {
             time: '15:40',
@@ -141,6 +145,7 @@ var app = new Vue({
       {
         name: 'Giacomo',
         visible: true,
+        staScrivendo: false,
         messages: [
           {
             time: '15:30',
@@ -173,6 +178,7 @@ var app = new Vue({
       {
         name: 'Yuri',
         visible: true,
+        staScrivendo: false,
         messages: [
           {
             time: '15:30',
@@ -222,8 +228,9 @@ var app = new Vue({
     cambio(index){
       this.contatore = index;
     },
-    addText(){
-      setTimeout(() => {
+    addText(index){
+      setTimeout((index) => {
+        this.contacs[this.contatore].staScrivendo = false;
         this.contacs[this.contatore].messages.push({
           time: moment().locale('it').format('LT'),
           text: '*L\'utente ha abbandonato la chat*',
@@ -231,6 +238,7 @@ var app = new Vue({
           dropdown: 'none'
         });
       }, 2000);
+      this.contacs[this.contatore].staScrivendo = true;
       if (this.nuovoText.length > 0) {
         this.contacs[this.contatore].messages.push({
           time: moment().locale('it').format('LT'),

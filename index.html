@@ -56,7 +56,8 @@
           </div>
           <div class="details" :class="element.messages[element.messages.length-1].status+'-details'">
           <h4>{{element.name}}</h4>
-          <p>{{element.messages[element.messages.length-1].text}}</p>
+          <p v-if="contacs[index].staScrivendo">Sta scrivendo...</p>
+          <p v-else>{{element.messages[element.messages.length-1].text}}</p>
           </div>
           <p>{{element.messages[element.messages.length-1].time}}</p>
         </div>
@@ -106,7 +107,9 @@
           </div>
           <div class="dettagli">
             <h4>{{contacs[contatore].name}}</h4>
-            <p>Ultimo accesso alle...</p>
+            <!-- <p>Ultimo accesso alle...</p> -->
+            <p v-if="contacs[contatore].staScrivendo">Sta scrivendo...</p>
+            <p v-else>Ultimo accesso oggi alle...</p>
           </div>
         </div>
         <div class="header-dx-icons">
