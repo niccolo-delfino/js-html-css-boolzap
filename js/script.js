@@ -13,7 +13,8 @@ var app = new Vue({
           {
             time: '15:30',
             text: 'Ciao bello de casa! 🔥🔥',
-            status: 'received'
+            status: 'received',
+            dropdown: 'none'
           },
           {
             time: '15:32',

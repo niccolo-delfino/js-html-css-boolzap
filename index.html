@@ -124,7 +124,7 @@
             <div class="messages-contenuto" :class="element.status+'-contenuto'">
               {{element.text}}
               <i class="fas fa-angle-down">
-                <div class="dropdown">
+                <div class="dropdown" :class="'dropdown-'+element.dropdown">
                   <ul>
                     <li><span>Rispondi</span></li>
                     <li><span>Inoltra messaggio</span></li>

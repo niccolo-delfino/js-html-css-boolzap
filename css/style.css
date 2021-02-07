@@ -22,8 +22,12 @@ body{
   display: flex;
 }
 
-.active{
+.dropdown-active{
   display: inline-block;
+}
+
+.dropdown-none{
+  display: none;
 }
 
 /* SX */
@@ -247,7 +251,6 @@ body{
 }
 
 .messages .messages-contenuto .dropdown{
-   display: none;
    padding-top: 20px;
    vertical-align: middle;
    font-family: 'Roboto', sans-serif;
