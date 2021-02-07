@@ -123,7 +123,15 @@
           <div :class="element.status" v-for="element in contacs[contatore].messages">
             <div class="messages-contenuto" :class="element.status+'-contenuto'">
               {{element.text}}
-              <i class="fas fa-angle-down"></i>
+              <i class="fas fa-angle-down">
+                <div class="dropdown">
+                  <ul>
+                    <li><span>Rispondi</span></li>
+                    <li><span>Inoltra messaggio</span></li>
+                    <li><span>Elimina messaggio</span></li>
+                  </ul>
+                </div>
+              </i>
               <div class="orario">
                 {{element.time}}
               </div>
